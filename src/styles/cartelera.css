@@ -1,0 +1,181 @@
+.contenedor-cartelera {
+  background-repeat: no-repeat;
+  background: rgb(3, 0, 0);
+  background: linear-gradient(0deg, rgba(3, 0, 0, 1) 0%, rgba(21, 2, 2, 1) 18%, rgba(189, 22, 22, 1) 83%, rgba(154, 42, 42, 1) 100%);
+  background-repeat: no-repeat;
+
+}
+
+.movie-container {
+  display: flex;
+  min-width: 800px;
+  max-width: 1300px;
+  min-height: 400px;
+  max-height: 450px;
+
+}
+
+.carteleras {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+.cartelera {
+  word-wrap: break-word;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.informacion {
+  text-overflow: ellipsis;
+}
+
+.resumen-pelicula {
+  background-color: #ffffff;
+  padding-top: 20px;
+  border-top: solid 2px;
+  border-radius: 20px;
+}
+
+
+.detallesPeliculas {
+  display: block;
+  width: 50%;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.contenedor-horas {
+  padding: 10px;
+  width: 30%;
+  border-left: solid black 2px;
+
+}
+
+.contenedor-horas h3 {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.horarios {
+
+  display: flex;
+  padding-top: 30px;
+  padding-right: 10px;
+  justify-content: space-between;
+
+
+}
+
+.horas {
+  display: flex;
+  padding-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.horas a {
+
+  text-decoration: none;
+  padding: 10px;
+  background: rgb(3, 0, 0);
+  background: linear-gradient(0deg, rgb(189, 187, 187) 0%, rgb(237, 235, 235) 18%, rgb(176, 54, 54) 83%, rgb(209, 89, 89) 100%);
+  color: black;
+  border: 2px solid #893737;
+  transition: 2.0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.horas a:hover {
+  background: linear-gradient(0deg, rgb(112, 111, 111) 0%, rgb(111, 97, 97) 18%, rgb(148, 147, 147) 83%, rgb(203, 202, 202) 100%);
+  color: rgb(255, 255, 255);
+
+}
+
+.precio {
+
+  display: flex;
+  align-items: end;
+  height: 45%;
+}
+
+.obtenerTaquilla {
+
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.comprarTaquilla {
+
+  height: 60px;
+  padding: 10px;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  background: rgb(3, 0, 0);
+  background: linear-gradient(0deg, rgb(189, 187, 187) 0%, rgb(237, 235, 235) 18%, rgb(176, 54, 54) 83%, rgb(209, 89, 89) 100%);
+  border-radius: 15px;
+  color: #030303;
+
+}
+
+.comprarTaquilla:hover {
+  background: linear-gradient(0deg, rgb(112, 111, 111) 0%, rgb(111, 97, 97) 18%, rgb(148, 147, 147) 83%, rgb(203, 202, 202) 100%);
+  color: rgb(255, 255, 255);
+}
+
+.contenedor-informacion {
+  height: 210px;
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  font-size: 22px;
+
+}
+
+.informacion h3 {
+  padding-bottom: 10px;
+}
+
+.informacion-pelicula h2 {
+
+  padding-bottom: 15px;
+}
+
+.seleccionFecha {
+  background-color: #1b1b1b;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 23px;
+}
+
+.seleccionFecha select {
+  font-size: 25px;
+}
+
+.seleccionFecha h2 {
+  color: #000000;
+  background-color: white;
+  padding: 5px;
+}
+
+.seleccionFecha p {
+  padding: 5px;
+}

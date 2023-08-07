@@ -1,0 +1,96 @@
+nav {
+  margin-top: 25px;
+  display: flex;
+}
+
+.LogoContainer {
+  width: 94%;
+  margin: auto;
+}
+
+.LogoContainer a {
+  text-decoration: none;
+  color: #E50914;
+}
+
+header {
+  padding: 30px 0;
+  background-color: #171616;
+}
+
+header .LogoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .Logo {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: normal;
+  color: var(--logocolor);
+  font-size: 50px;
+  text-decoration: none;
+}
+
+.NAVContainer {
+  width: 90%;
+  margin: auto;
+}
+
+.NAVContainer a {
+  text-decoration: none;
+  color: #E50914;
+  font-size: 23px;
+}
+
+header .NAVContainer {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav a {
+  color: #AAA;
+  text-decoration: none;
+  margin-right: 20px;
+  margin-top: 15px;
+  font-size: 17px;
+}
+
+header nav a:hover,
+header nav a.activo {
+  transition: 0.5s;
+  color: #ff9361;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #141414;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(41, 41, 41, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #ff5100;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.buscar img {
+  margin-right: 15px;
+}
+
+.buscar input {
+  font-size: x-large;
+}

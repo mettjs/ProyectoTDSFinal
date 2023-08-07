@@ -1,0 +1,18 @@
+:root {
+  --color: #0016a7;
+  --fondo: #141414;
+  --logocolor: #E50914;
+}
+
+html,
+body {
+  background: var(--fondo) !important;
+  font-family: 'Open Sans', sans-serif !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100vh !important;
+}
+
+footer {
+  margin: 0 !important;
+}

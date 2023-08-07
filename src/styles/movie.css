@@ -1,0 +1,126 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  font-size: 14px;
+  border-radius: 15px;
+  border: black;
+
+}
+
+.informacion-pelicula h1 {
+  font-size: 45px;
+}
+
+.informacion-pelicula h3 {
+  font-size: 25px;
+}
+
+.informacion-pelicula p {
+  font-size: 16px;
+}
+
+.informacion-general {
+  color: white;
+  background-repeat: no-repeat;
+  background: rgb(3, 0, 0);
+  background: linear-gradient(0deg, rgba(3, 0, 0, 1) 0%, rgba(21, 2, 2, 1) 18%, rgba(189, 22, 22, 1) 83%, rgba(154, 42, 42, 1) 100%);
+  background-repeat: no-repeat;
+}
+
+.informacion-hijo {
+  display: flex;
+  width: 95%;
+  justify-content: space-around;
+  padding-top: 40px;
+
+}
+
+.informacion-pelicula {
+  width: 50%;
+}
+
+.imgPelicula {
+  width: 35%;
+
+}
+
+.comprar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+
+}
+
+.comprar button {
+  margin-top: 80px;
+  width: 80%;
+}
+
+.peliculas-recomendadas {
+  margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-principal {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel {
+  filter: drop-shadow(0 0 0.50rem gray);
+  width: 100%;
+  padding: 10px 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel {
+  padding-left: 5em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.peliculas-recomendadas.contenedor-carousel .carousel .pelicula {
+  min-width: 20%;
+  transition: .4s ease all;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover {
+  transform: scale(1.1);
+  transform-origin: center;
+  z-index: 99;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
+  vertical-align: top;
+}
+
+.EnCartelera {
+  color: #FFF;
+  font-size: 45px;
+  text-align: center;
+}
+
+.pelicula h1 {
+  font-size: 25px;
+  color: #FFF;
+}
+
+@media screen and (max-width: 800px) {
+  .pelicula-principal .descripcion {
+    max-width: 100%;
+  }
+
+  .peliculas-recomendadas .contenedor-carousel {
+    overflow: visible;
+  }
+
+  .peliculas-recomendadas .contenedor-carousel .carousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
