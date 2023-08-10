@@ -20,8 +20,7 @@ const NavBar = () => {
           </div>
         </div>
         <a href="/estrenos" className="" id="Estrenos"><strong>Estrenos</strong></a>
-        <a href="/proximamente" className="" id="Proximamente"><strong>Proximamente</strong></a>
-        <a href="/" className="" id="Combos"><strong>Combos</strong></a>
+        <a href="/Proximamente" className="" id="Proximamente"><strong>Proximamente</strong></a>
       </nav>
     </div>
   </header>

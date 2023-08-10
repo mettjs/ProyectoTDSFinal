@@ -17,7 +17,7 @@ function useCartelera(id?: string) {
     queryKey,
     {
       queryFn: id
-        ? () => carteleraService.getById(`/${id}`)
+        ? () => carteleraService.getById(`${id}`)
         : () => carteleraService.getAll(),
       refetchOnWindowFocus: false
 

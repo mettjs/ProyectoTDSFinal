@@ -3,8 +3,8 @@ import useCartelera from "@/hooks/queries/useCartelera";
 import useMovies from "@/hooks/queries/useMovies";
 import useQueryParams from "@/hooks/useQueryParams";
 import Cartelera from "@/models/Cartelera.models";
-import { Router, useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 const MovieDetail = () => {
   const { push } = useRouter();
@@ -46,8 +46,8 @@ const MovieDetail = () => {
                 <a><img src={data?.img} alt=""
                   height="550" width="400"></img>
                 </a>
-                <button id="obtenerTaquilla" className="comprarTaquilla">
-                  <a href="/"><h2>Obtener Taquilla</h2></a>
+                <button onClick={() => push(`/Ticket/${data.id}`)} id="obtenerTaquilla" className="comprarTaquilla">
+                  <a><h2>Obtener Taquilla</h2></a>
                 </button>
 
               </div>

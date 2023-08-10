@@ -27,7 +27,7 @@ const Cartelera = () => {
                   <div className="resumen-pelicula">
                     <div className="movie-container">
                       <div className="pelicula">
-                        <img src={`${cartelera.img}`} alt="" height="300px" width="250px"></img>
+                        <img onClick={() => push(`/movies/${cartelera.idPelicula}`)} src={`${cartelera.img}`} alt="" height="300px" width="250px"></img>
                       </div>
 
                       <div className="detallesPeliculas">

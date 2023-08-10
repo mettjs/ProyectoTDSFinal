@@ -1,8 +1,8 @@
 export default interface Cafeteria {
-  iDCombo: number;
+  idCombo: number;
   nombre: string;
   descripcion: string;
   contenido: string;
-  precio: number;
+  precio: string;
   img: string;
 }

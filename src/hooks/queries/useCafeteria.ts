@@ -17,7 +17,7 @@ function useCafeteria(id?: string) {
     queryKey,
     {
       queryFn: id
-        ? () => cafeteriaService.getById(`/${id}`)
+        ? () => cafeteriaService.getById(`${id}`)
         : () => cafeteriaService.getAll(),
       refetchOnWindowFocus: false
 
