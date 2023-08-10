@@ -1,5 +1,6 @@
-
+/* eslint-disable @next/next/no-html-link-for-pages */
 const NavBar = () => {
+
   return <header>
     <div className="LogoContainer">
       <h2 className="Logo"><a href="/" className="contenedor">WKMCinemas</a></h2>
@@ -8,8 +9,8 @@ const NavBar = () => {
 
     <div className="NAVContainer">
       <nav>
-        <a href="/" className="activo" id="index"><strong>Inicio</strong></a>
-        <a href="/movies" className="" id="Cartelera"><strong>Cartelera</strong></a>
+        <a href="/" className=""><strong>Inicio</strong></a>
+        <a href="/movies" className=""><strong>Cartelera</strong></a>
         <div className="dropdown">
           <a href="/" className="" id="Generos"><strong>Generos</strong></a>
           <div className="dropdown-content">
