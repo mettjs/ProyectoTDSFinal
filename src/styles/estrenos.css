@@ -6,7 +6,16 @@
   font-size: 23px;
   display: flex;
   margin-bottom: 50px;
+  border: 1px;
+}
 
+.contenedor-padre hr {
+  margin-left: 12rem;
+  margin-right: 15rem;
+  margin-top: 1rem;
+  border-color: #ffffff;
+  border-width: 2px;
+  opacity: 1;
 }
 
 .pelicula {
@@ -61,5 +70,9 @@
   background: linear-gradient(0deg, rgba(3, 0, 0, 1) 0%, rgba(21, 2, 2, 1) 18%, rgba(189, 22, 22, 1) 83%, rgba(154, 42, 42, 1) 100%);
   background-repeat: no-repeat;
   display: flexbox;
+}
 
+.contenedor-padre h2 {
+  color: #ffffff;
+  font-size: 40px;
 }

@@ -9,7 +9,7 @@ const Payment = () => {
   return (<div className="pattern">
     <div className="container w-75 bg-black rounded">
       <h1 className="text-center my-4 text-danger p-5">WKMCINEMAS PAY</h1>
-    </div>
+      i</div>
     <div className="container w-75 text-center bg-dark my-5 text-danger rounded py-5">
       <div className="bg-dark">
         <div className="d-flex p-5 pb-5 justify-content-around">
@@ -31,8 +31,10 @@ const Payment = () => {
           <div className="container-fluid bg-black py-5 rounded">
             <h1 className="pb-5">Datos de la orden</h1>
             <div className="d-flex flex-column w-75 mx-auto pt-3">
-              <label htmlFor="" className="text-start h3 pt-5 mt-5" >Correo electronico:</label>
+              <label htmlFor="" className="text-start h3 pt-3" >Correo electronico:</label>
               <input type="text" placeholder="example@example.com" />
+              <label htmlFor="" className="text-start h3 pt-3" >Titular de la Tarjeta:</label>
+              <input type="text" placeholder="Nombre   Apellido" />
               <label htmlFor="string" className="text-start h3 pt-3">Monto a pagar:</label>
               <input readOnly type="number" placeholder={total} />
               <label htmlFor="string" className="text-start h3 pt-3">ITBIS:</label>
@@ -42,7 +44,7 @@ const Payment = () => {
         </div>
         <div className="my-4 container d-flex justify-content-around">
           <button onClick={() => push(`/movies`)} className="btn btn-danger w-25">Cancelar</button>
-          <button onClick={() => push(`/payment`)} className="btn btn-success w-25">Pagar</button>
+          <button onClick={() => push(`/`)} className="btn btn-success w-25">Pagar</button>
 
         </div>
       </div>

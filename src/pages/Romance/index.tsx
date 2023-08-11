@@ -13,6 +13,7 @@ const Romance = () => {
     <div className="genero">
       <h2>Peliculas de Romance</h2>
     </div>
+    <hr />
 
     <div className="container">
       <div className="contenedor-peliculas">

@@ -13,6 +13,7 @@ const Accion = () => {
     <div className="genero">
       <h2>Peliculas de Accion</h2>
     </div>
+    <hr />
 
     <div className="container">
       <div className="contenedor-peliculas">

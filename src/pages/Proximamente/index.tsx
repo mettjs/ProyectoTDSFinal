@@ -11,6 +11,7 @@ const Proximamente = () => {
     <div className="genero">
       <h2>Proximamente en WKMCinemas</h2>
     </div>
+    <hr />
 
     <div className="container">
       <div className="contenedor-peliculas">
@@ -25,7 +26,7 @@ const Proximamente = () => {
           )
         }
       </div>
-    </div>
+      h</div>
   </div>
 };
 

@@ -13,6 +13,7 @@ const Terror = () => {
     <div className="genero">
       <h2>Peliculas de Terror</h2>
     </div>
+    <hr />
 
     <div className="container">
       <div className="contenedor-peliculas">

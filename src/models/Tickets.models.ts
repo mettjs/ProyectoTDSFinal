@@ -1,9 +1,10 @@
 export default interface Tickets {
   iDTicket: number;
   pelicula: string;
-  fecha: Date;
+  fecha: string;
   clienteID: number;
-  salaID: number;
-  total: number;
+  Total: number;
   comboID: number;
+  ticket: string;
+  peliculaID: number;
 }
