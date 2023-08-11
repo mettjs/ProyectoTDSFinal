@@ -1,8 +1,12 @@
+import useMovies from "@/hooks/queries/useMovies";
+import useQueryParams from "@/hooks/useQueryParams";
 import { useRouter } from "next/router";
 
 
 const Payment = () => {
   const { push } = useRouter();
+  const movieId = useQueryParams("movieId");
+  const { data } = useMovies(movieId);
   let total = 400
   let ITBIS = Math.round(total - (total / 1.18));
 
