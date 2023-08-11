@@ -1,10 +1,11 @@
 export default interface Tickets {
   iDTicket: number;
+  nombre: string;
+  correo: string;
   pelicula: string;
   fecha: string;
-  clienteID: number;
-  Total: number;
+  total: number;
   comboID: number;
-  ticket: string;
+  codigo: string;
   peliculaID: number;
 }

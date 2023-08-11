@@ -29,7 +29,7 @@ const Ticket = () => {
               <button className="btn btn-outline-danger mx-2">8:30 PM</button>
               <button className="btn btn-outline-danger mx-2">8:30 AM</button>
             </div>
-            <button onClick={() => push(`/combos`)} className="w-50 btn btn-danger mt-5">Agrega un combo</button>
+            <button onClick={() => push(`/combos/${movieId}`)} className="w-50 btn btn-danger mt-5">Agrega un combo</button>
             <div className="my-5 pt-5 w-100">
               <button onClick={() => push(`/movies`)} className="btn btn-outline-danger mx-4">Atrás</button>
               <button onClick={() => push(`/payment/${movieId}`)} className="btn btn-outline-success mx-4">Comprar</button>
