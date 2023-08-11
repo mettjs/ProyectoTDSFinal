@@ -23,6 +23,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.64.2",
+    "sweetalert2": "^11.7.22",
     "typescript": "5.1.6",
     "yarn": "^1.22.19"
   }

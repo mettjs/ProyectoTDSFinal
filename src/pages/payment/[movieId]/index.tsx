@@ -1,5 +1,6 @@
 import useCreateTicket from "@/hooks/mutations/tickets/useCreateTicket";
 import useMovies from "@/hooks/queries/useMovies";
+import useAlert from "@/hooks/useAlert";
 import useQueryParams from "@/hooks/useQueryParams";
 import Tickets from "@/models/Tickets.models";
 import { Field, Form, Formik } from "formik";
@@ -10,6 +11,7 @@ const Payment = () => {
   const movieId = useQueryParams("movieId");
   const { data } = useMovies(movieId);
   const { push } = useRouter();
+  const { success } = useAlert();
   let total = 400
   let ITBIS = Math.round(total - (total / 1.18));
   const createTicket = useCreateTicket();
@@ -17,10 +19,10 @@ const Payment = () => {
   const Guardar = async (value: Partial<Tickets>) => {
     value.pelicula = data?.titulo
     value.peliculaID = data?.id
-    value.comboID = 1
-    await createTicket.mutateAsync(value as Tickets);
-
+    value.comboID = 0
+    await createTicket.mutateAsync(value as Tickets).then(() => success(undefined, "Ticket creado exitosamente").then(() => push(`/`)));
   }
+
 
   return (<div className="pattern">
     <div className="container w-75 bg-black rounded">
@@ -34,14 +36,13 @@ const Payment = () => {
               <Formik
                 initialValues={{
                   tarjeta: 0,
-                  ITBIS: 0,
                   seguridad: 0,
                   pelicula: data?.titulo!,
                   nombre: '',
                   correo: '',
                   fecha: (new Date).toLocaleString(),
                   total: total,
-                  comboID: 1,
+                  comboID: 0,
                   peliculaID: Number(movieId)
                 }}
                 onSubmit={async (value: Partial<Tickets>) => {
@@ -58,15 +59,15 @@ const Payment = () => {
 
                     <div className='input-container'>
                       <label htmlFor="" className="text-start h3 pt-2">Numero de tarjeta:</label>
-                      <Field className='ticket-name-input' type='number' placeholder='Número de tarjeta' name='tarjeta' id='tarjeta' />
+                      <Field className='ticket-name-input' type='text' placeholder='Número de tarjeta' name='tarjeta' id='tarjeta' />
                     </div>
                     <div className='input-container'>
                       <label htmlFor="" className="text-start h3 pt-2">Fecha de expiración:</label>
-                      <Field className='ticket-name-input' type='month' placeholder='Fecha de expiración' name='expiración' id='Expiracion' />
+                      <Field className='ticket-name-input' type='date' placeholder='Fecha de expiración' name='expiración' id='Expiracion' />
                     </div>
                     <div className='input-container'>
                       <label htmlFor="" className="text-start h3 pt-2">Código de seguridad:</label>
-                      <Field className='ticket-name-input' type='number' name='seguridad' id='seguridad' min="1" max="999" placeholder="000" />
+                      <Field className='ticket-name-input' type='text' name='seguridad' id='seguridad' min="1" max="999" placeholder="000" />
                     </div>
                     <div className="container-fluid bg-black py-5 rounded">
 
@@ -85,7 +86,7 @@ const Payment = () => {
                       <div className='input-container'>
                         <label htmlFor="string" className="text-start h3 pt-3">Monto a pagar:</label>
 
-                        <Field className='ticket-total-input' type='number' placeholder={total.toString()} name='total' id='ticket-total' />
+                        <Field readOnly className='ticket-total-input' type='number' placeholder={total.toString()} name='total' id='ticket-total' />
                       </div>
                       <div className='input-container'>
                         <label htmlFor="string" className="text-start h3 pt-3">ITBIS:</label>

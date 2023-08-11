@@ -1,6 +1,7 @@
 import useCreateTicket from "@/hooks/mutations/tickets/useCreateTicket";
 import useCafeteria from "@/hooks/queries/useCafeteria";
 import useMovies from "@/hooks/queries/useMovies";
+import useAlert from "@/hooks/useAlert";
 import useQueryParams from "@/hooks/useQueryParams";
 import Tickets from "@/models/Tickets.models";
 import { Field, Form, Formik } from "formik";
@@ -13,6 +14,7 @@ const PaymentCombo = () => {
   const { data: result } = useCafeteria(idCombo)
   const { data } = useMovies(movieId);
   const { push } = useRouter();
+  const { success } = useAlert();
   let total = Number(result?.precio) + 400;
   let ITBIS = Math.round(total - (total / 1.18));
   const createTicket = useCreateTicket();
@@ -22,7 +24,7 @@ const PaymentCombo = () => {
     value.peliculaID = data?.id
     value.comboID = Number(idCombo)
     value.total = total
-    await createTicket.mutateAsync(value as Tickets);
+    await createTicket.mutateAsync(value as Tickets).then(() => success(undefined, "Ticket creado exitosamente").then(() => push(`/`)));
 
   }
 
@@ -58,16 +60,16 @@ const PaymentCombo = () => {
                     <img className="w-50 mb-5" src="https://images.ctfassets.net/gc4s9mi2asix/27iheywutAjlzI1CWL3srg/faf536e2fabecb072ef5864bc3a0950b/Accepted-Cards-US.png" alt="" />
 
                     <div className='d-flex flex-column w-50 mx-auto'>
-                      <label htmlFor="" className="text-start h3 pt-2">Numero de tarjeta:</label>
-                      <Field className='ticket-name-input' type='number' placeholder='XXXX-XXXX-XXXX-XXXX' name='name' id='ticket-name' />
+                      <label htmlFor="" className="text-start h3 pt-2 mx-3">Numero de tarjeta:</label>
+                      <Field className='ticket-name-input' type='text' placeholder='Número de tarjeta' name='tarjeta' id='tarjeta' />
                     </div>
                     <div className='input-container'>
-                      <label htmlFor="" className="text-start h3 pt-3">Fecha de expiración:</label>
+                      <label htmlFor="" className="text-start h3 pt-2">Fecha de expiración:</label>
                       <Field className='ticket-name-input pl-5' type='date' placeholder='Fecha de expiración' name='name' id='ticket-name' />
                     </div>
                     <div className='input-container'>
                       <label htmlFor="" className="text-start h3 pt-2">Código de seguridad:</label>
-                      <Field className='ticket-name-input' type='number' name='name' id='ticket-name' min="0" max="999" placeholder="000" />
+                      <Field className='ticket-name-input' type='text' name='seguridad' id='seguridad' min="1" max="999" placeholder="000" />
                     </div>
                     <div className="container-fluid bg-black py-5 rounded">
 
