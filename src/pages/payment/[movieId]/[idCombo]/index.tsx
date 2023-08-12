@@ -65,7 +65,7 @@ const PaymentCombo = () => {
                     </div>
                     <div className='input-container'>
                       <label htmlFor="" className="text-start h3 pt-2">Fecha de expiración:</label>
-                      <Field className='ticket-name-input pl-5' type='date' placeholder='Fecha de expiración' name='name' id='ticket-name' />
+                      <Field className='ticket-name-input pl-5' type='month' placeholder='Fecha de expiración' name='name' id='ticket-name' />
                     </div>
                     <div className='input-container'>
                       <label htmlFor="" className="text-start h3 pt-2">Código de seguridad:</label>

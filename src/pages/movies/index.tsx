@@ -12,9 +12,9 @@ const Cartelera = () => {
         <p><strong>PIANTINI</strong></p>
         <p><strong>Agosto</strong></p>
         <select title="fechas" name="fechas" id="">
-          <option value="">07/08/2023</option>
-          <option value="">08/08/2023</option>
-          <option value="">09/08/2023</option>
+          <option value="">11/08/2023</option>
+          <option value="">12/08/2023</option>
+          <option value="">13/08/2023</option>
         </select>
       </div>
       <div className="contenedor-cartelera">
@@ -60,17 +60,17 @@ const Cartelera = () => {
                         <div className="horarios">
                           <div className="horas">
                             <a href="">
-                              <p><strong>7:00 AM</strong></p>
+                              <p><strong>3:00 PM</strong></p>
                             </a>
                           </div>
                           <div className="horas">
                             <a href="">
-                              <p><strong>9:00 AM</strong></p>
+                              <p><strong>5:00 PM</strong></p>
                             </a>
                           </div>
                           <div className="horas">
                             <a href="">
-                              <p><strong>11:00 AM</strong></p>
+                              <p><strong>7:00 PM</strong></p>
                             </a>
                           </div>
 

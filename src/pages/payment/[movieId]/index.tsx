@@ -20,7 +20,7 @@ const Payment = () => {
     value.pelicula = data?.titulo
     value.peliculaID = data?.id
     value.comboID = 0
-    await createTicket.mutateAsync(value as Tickets).then(() => success(undefined, "Ticket creado exitosamente").then(() => push(`/`)));
+    await createTicket.mutateAsync(value as Tickets).then(() => success(undefined, "Compra exitosa, verifique su correo electronico!").then(() => push(`/`)));
   }
 
 
@@ -63,7 +63,7 @@ const Payment = () => {
                     </div>
                     <div className='input-container'>
                       <label htmlFor="" className="text-start h3 pt-2">Fecha de expiración:</label>
-                      <Field className='ticket-name-input' type='date' placeholder='Fecha de expiración' name='expiración' id='Expiracion' />
+                      <Field className='ticket-name-input' type='month' placeholder='Fecha de expiración' name='expiración' id='Expiracion' />
                     </div>
                     <div className='input-container'>
                       <label htmlFor="" className="text-start h3 pt-2">Código de seguridad:</label>

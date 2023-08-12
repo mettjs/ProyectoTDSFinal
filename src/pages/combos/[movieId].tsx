@@ -39,9 +39,8 @@ const Combos = () => {
                     </h4>
                     <div className="btnGroup mx-auto mt-5  d-flex flex-column container">
                       <div className="input-group">
-                        <input type="number" min="0" max="10" className="form-control" placeholder="Cantidad" aria-label="Recipient's username with two button addons" />
-                        <button onClick={() => push(`/movies`)} className="btn btn-outline-danger" type="button"><a href="" className="link">Atras</a></button>
-                        <button onClick={() => push(`/payment/${movieId}/${cafeteria.idCombo}`)} className="btn btn-outline-success" type="button"><a className="link">Comprar</a></button>
+                        <button onClick={() => push(`/movies`)} className="btn btn-outline-danger mx-auto px-5" type="button"><a href="" className="link">Atras</a></button>
+                        <button onClick={() => push(`/payment/${movieId}/${cafeteria.idCombo}`)} className="btn btn-outline-success mx-auto px-5" type="button"><a className="link">Comprar</a></button>
 
                       </div>
                     </div>

@@ -1,9 +1,11 @@
 import useMovies from "@/hooks/queries/useMovies";
 import Peliculas from "@/models/Peliculas.model";
+import { useRouter } from "next/router";
 
 const Proximamente = () => {
 
   const { data } = useMovies();
+  const { push } = useRouter();
 
 
   return <div className="contenedor-padre">
@@ -19,7 +21,7 @@ const Proximamente = () => {
           data !== undefined && data?.length !== 0 && data?.filter(x => x.estreno == "Proximamente").map(
             (pelicula: Peliculas) => (
               <div className="pelicula" key={pelicula.id}>
-                <a href="#"><img src={pelicula.img} alt="" height="300" width="250"></img></a>
+                <a onClick={() => push(`/movies/${pelicula.id}`)}><img src={pelicula.img} alt="" height="300" width="250"></img></a>
                 <div className="titulo-pelicula">{pelicula.titulo}</div>
               </div>
             )

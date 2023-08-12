@@ -26,8 +26,8 @@ const Ticket = () => {
             </h1>
             <h5 className="mt-5">Selccione un horario</h5>
             <div className="mx-auto d-flex justify-content-center bg-black">
-              <button className="btn btn-outline-danger mx-2">8:30 PM</button>
-              <button className="btn btn-outline-danger mx-2">8:30 AM</button>
+              <button className="btn btn-outline-danger mx-2">5:00 PM</button>
+              <button className="btn btn-outline-danger mx-2">7:00 PM</button>
             </div>
             <button onClick={() => push(`/combos/${movieId}`)} className="w-50 btn btn-danger mt-5">Agrega un combo</button>
             <div className="my-5 pt-5 w-100">
