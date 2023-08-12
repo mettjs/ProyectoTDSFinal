@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import useCafeteria from "@/hooks/queries/useCafeteria"
 import useQueryParams from "@/hooks/useQueryParams";
 import Cafeteria from "@/models/Cafeteria.models"
@@ -39,8 +40,8 @@ const Combos = () => {
                     </h4>
                     <div className="btnGroup mx-auto mt-5  d-flex flex-column container">
                       <div className="input-group">
-                        <button onClick={() => push(`/movies`)} className="btn btn-outline-danger mx-auto px-5" type="button"><a href="" className="link">Atras</a></button>
-                        <button onClick={() => push(`/payment/${movieId}/${cafeteria.idCombo}`)} className="btn btn-outline-success mx-auto px-5" type="button"><a className="link">Comprar</a></button>
+                        <button onClick={() => push(`/movies`)} className="btn btn-outline-danger mx-auto px-5" type="button">Atras</button>
+                        <button onClick={() => push(`/payment/${movieId}/${cafeteria.idCombo}`)} className="btn btn-outline-success mx-auto px-5" type="button">Comprar</button>
 
                       </div>
                     </div>
